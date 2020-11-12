@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+#user_index{
+    position:relative;
+    width:1024px;
+    position:relative;
+    left:50%;
+    margin-top:100px;
+    transform:translate(-50%);
+}
+
+.index_content{
+    width:200px;
+}
+
+.index_content :nth-child(1){
+    margin-left:10px;
+    font-size:18px;
+    font-weight:900;
+    color:#003aaa;
+    border-bottom:1px solid;
+    width:168px;
+    padding-left:10px;
+    padding-bottom:10px;
+    cursor:context-menu;
+}
+
+.index_content *{
+    margin-left:10px;
+    font-size:14px;
+    font-weight:900;
+    color:#3c3c3c;
+    border-bottom:1px solid #979797;
+    width:168px;
+    padding-left:10px;
+    padding-bottom:10px;
+    cursor:pointer;
+    padding-top:18px;
+}

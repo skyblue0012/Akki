@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+* {
+	font-family: "맑은고딕", "Malgun Gothic", "serif";
+	margin:0;
+	padding:0;
+}
+
+#top {
+	position: relative;
+	width: 1024px;
+	height: 250px;
+	left: 50%;
+	transform: translate(-50%);
+	margin-top: 10px;
+}
+
+#click_box {
+	width: 1024px;
+	height: 30px;
+}
+
+#click_box * {
+	display: inline;
+	font-size: 14px;
+	float: right;
+	margin-left: 5px;
+}
+
+#click_box>p {
+	cursor: pointer;
+}
+
+.logo {
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	top: 70px;
+	cursor: pointer;
+}
+
+.business_name {
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	left: 340px;
+	top: -10px;
+	cursor: pointer;
+}
+
+#top_box {
+	position: absolute;
+	width: 200px;
+	right: 80px;
+	top: 168px;
+}
+
+#search {
+	outline: none;
+}
+
+#search_box {
+	border-bottom: 3px solid black;
+	width: 230px;
+	position: absolute;
+	right: -80px;
+}
+
+#search_box :nth-child(1) {
+	border: none;
+	width: 200px;
+	height: 30px;
+	outline-color: black;
+}
+
+#search_box :nth-child(2) {
+	position: absolute;
+	z-index: 9999;
+	background-color: white;
+	height: 20px;
+	padding: 5px;
+	cursor: pointer;
+}
+
+nav {
+	width: 1024px;
+	justify-content: center;
+	position: absolute;
+	z-index: 9999;
+	background: #ffffff;
+	left: 50%;
+	transform: translate(-50%);
+	border-bottom: 1px solid black;
+	background: white;
+}
+
+ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#main-menu>li {
+	float: left;
+	position: relative;
+	margin: -1px;
+	font-weight: 900;
+}
+
+#main-menu>li>a {
+	font-size: 0.9rem;
+	color: rgba(0, 0, 0, 0.85);
+	text-align: center;
+	text-decoration: none;
+	letter-spacing: 0.05em;
+	display: block;
+	width: calc(1024px/ 8);
+	height: 30px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+#brand {
+	position: absolute;
+	background: #ffffff;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.15s ease-in;
+	z-index: 9999;
+	background: transparent;
+	margin-left: 1px;
+}
+
+#brand>li {
+	padding: 10px 5px;
+	width: 115px;
+	text-align: center;
+	border-right: 1px solid #000000;
+	border-left: 1px solid #000000;
+	background-color: #fcfcfc;
+}
+
+#brand>li:hover {
+	background-color: #ffffbd;
+}
+
+#brand>li:last-child {
+	position: relative;
+	border-bottom: 1px solid #676767;
+}
+
+#brand>li:nth-child(1) {
+	padding-top: 10px;
+}
+
+#brand>li * {
+	font-size: 13px;
+}
+
+#brand>li>a {
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+}
+
+#main-menu>li:hover #brand {
+	opacity: 1;
+	visibility: visible;
+}
+
+#brand>li>a:hover {
+	text-decoration: none;
+	cursor: pointer;
+}

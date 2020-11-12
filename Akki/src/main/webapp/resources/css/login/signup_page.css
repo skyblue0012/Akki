@@ -1,0 +1,168 @@
+@charset "UTF-8";
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+#sign_up {
+	font-weight: 900;
+}
+
+#sub_nav {
+	position: relative;
+	width: 1024px;
+	left: 50%;
+	height: 30px;
+	margin-top: 50px;
+	transform: translate(-50%);
+}
+
+#sub_nav * {
+	margin-top: 30px;
+	font-size: 15px;
+	cursor: pointer;
+}
+
+ul {
+	list-style: none;
+}
+
+#content_top {
+	position: relative;
+	top: 50px;
+	width: 1024px;
+	left: 50%;
+	transform: translate(-50%);
+	height: 60px;
+	background-color: #f6f6f6;
+	border: 1px solid #8e8e8e;
+	border-radius: 8px;
+}
+
+#content_top>p {
+	text-align: center;
+	font-size: 30px;
+	font-weight: 900;
+	line-height: 60px;;
+}
+
+#content_box1 {
+	width: 1024px;
+	height: 330px;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 100px);
+}
+
+#content_box1>p {
+	font-size: 20px;
+	font-weight: 900;
+	margin: 0;
+	margin-bottom: 10px;
+}
+
+#box1_content {
+	border: 1px solid #636363;
+	border-radius: 5px;
+	width: 1020px;
+	height: 280px;
+	overflow: hidden;
+	overflow-y: scroll;
+}
+
+#content_box2 {
+	width: 1024px;
+	height: 330px;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 150px);
+}
+
+#content_box2>p {
+	font-size: 20px;
+	font-weight: 900;
+	margin: 0;
+	margin-bottom: 10px;
+}
+
+#box2_content {
+	border: 1px solid #636363;
+	border-radius: 5px;
+	width: 1020px;
+	height: 280px;
+	overflow: hidden;
+	overflow-y: scroll;
+}
+
+#radio1 {
+	position: relative;
+	width: 1024px;
+	left: 50%;
+	transform: translate(-50%, 100px);
+}
+
+#radio1 * {
+	text-align: right;
+}
+
+#radio1 input {
+	cursor: pointer;
+}
+
+#radio2 input {
+	cursor: pointer;
+}
+
+#radio2 {
+	position: relative;
+	width: 1024px;
+	left: 50%;
+	transform: translate(-50%, 150px);
+}
+
+#radio2 * {
+	text-align: right;
+}
+
+#cotent_bottom {
+	position: relative;
+	width: 1024px;
+	left: 50%;
+	transform: translate(-50%, 250px);
+	height: 150px;
+}
+
+#cotent_bottom * {
+	width: 150px;
+	height: 50px;
+	position: relative;
+	left: 370px;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	color: black;
+	font-size: 16px;
+	font-weight: 900;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#cotent_bottom {
+	margin-bottom: 250px;
+}
+
+#cotent_bottom :nth-child(1) :nth-child(1) {
+	background-color: #495164;
+	color: white;
+	position: relative;
+	left: -50px;
+}
+
+#cotent_bottom :nth-child(1) :nth-child(2) {
+	background-color: #a5a5a5;
+	color: white;
+	position: relative;
+	left: 110px;
+	bottom: 50px;
+}

@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+#none_product{
+    position:relative;
+    width:500px;
+    height:80px;
+    left:50%;
+    transform:translate(-50%);
+    margin-top:160px;
+    margin-bottom:121px;
+    text-align:center;
+    line-height:80px;
+    border:2px solid black;
+    font-size:17px;
+    font-weight:900;
+    border-radius:15px;
+}

@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#cotent_box {
+	position: relative;
+	width: 520px;
+	border: 2px solid gainsboro;
+	border-radius: 10px;
+	height: 200px;
+	left: 50%;
+	transform: translate(-50%, 150px);
+	margin-bottom: 250px;
+}
+
+#cotent_box>:nth-child(1) {
+	position: relative;
+	top: 80px;
+	left: 60px;
+	color: #fff;
+	background-color: #495164;
+	width: 150px;
+	height: 50px;
+	font-size: 15px;
+	font-weight: bold;
+	border-radius: 5px;
+	border: 1px solid black;
+}
+
+#cotent_box>:nth-child(2) {
+	position: relative;
+    top: 80px;
+    float: right;
+    right: 60px;
+    color: #fff;
+    background-color: #a5a5a5;
+    width: 150px;
+    height: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid #848484;
+}

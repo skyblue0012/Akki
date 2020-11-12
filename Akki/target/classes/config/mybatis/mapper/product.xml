@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="pro">
+
+	<select id="product_list" resultType="product">
+		select * from akki_product
+		ORDER BY p_date DESC
+		LIMIT #{start}, #{end}
+	</select>
+	
+	<insert id="regi_product" parameterType="product">
+		insert into akki_product values(
+			#{p_idx}, #{p_type}, #{p_brand}, #{p_name}, #{p_price}, #{p_img},
+			#{p_content}, #{p_content_img}, #{p_origin}, #{p_content_s}, #{p_pop}, now()
+		)
+	</insert>
+	
+	<select id="all_search" resultType="product" parameterType="Map">
+		select * from akki_product where
+		p_type LIKE concat('%', #{what}, '%') or
+		p_brand LIKE concat('%', #{what}, '%') or
+		p_origin LIKE concat('%', #{what}, '%') or
+		p_name LIKE concat('%', #{what}, '%') or
+		p_content_s LIKE concat('%', #{what}, '%')
+		ORDER BY FIELD(p_pop,1,0) ASC, p_date DESC
+		LIMIT #{start}, #{end}
+	</select>
+	
+	<select id="product_search_list" parameterType="String" resultType="int">
+		select count(*) from akki_product where
+		p_type LIKE concat('%', #{what}, '%') or
+		p_brand LIKE concat('%', #{what}, '%') or
+		p_origin LIKE concat('%', #{what}, '%') or
+		p_name LIKE concat('%', #{what}, '%') or
+		p_content_s LIKE concat('%', #{what}, '%')
+	</select>
+	
+	<select id="choose_search" parameterType="Map" resultType="product">
+		select * from akki_product where ${how} LIKE concat('%', #{what}, '%')
+		ORDER BY p_date DESC
+		LIMIT #{start}, #{end}
+	</select>
+	
+	<select id="one_vo" resultType="product" parameterType="Integer">
+		select * from akki_product where p_idx=#{p_idx}
+	</select>
+	
+	<update id="modify_product" parameterType="product">
+		update akki_product set p_type=#{p_type},
+		p_brand=#{p_brand}, p_name=#{p_name}, p_price=#{p_price}, 
+		p_img=#{p_img}, p_content=#{p_content}, p_content_img=#{p_content_img},
+		p_origin=#{p_origin}, p_content_s=#{p_content_s}, p_pop=#{p_pop} where p_idx=#{p_idx} 
+	</update>
+	
+	<delete id="del" parameterType="Integer">
+		delete from akki_product where p_idx=#{p_idx}
+	</delete>
+	
+	<select id="product_category" parameterType="java.util.HashMap" resultType="product">
+		select * from akki_product where p_type=#{p_type} and p_brand=#{p_brand}
+	</select>
+	
+	<select id="product_count_all" parameterType="String" resultType="int">
+		select count(*) from akki_product where p_type=#{p_type}
+	</select>
+	
+	<select id="product_count" parameterType="Map" resultType="int">
+		select count(*) from akki_product where p_type=#{p_type} and p_brand=#{p_brand}
+	</select>
+	
+	<select id="product_cate_check" parameterType="Map" resultType="product">
+		select * from akki_product where p_type=#{p_type} and p_brand=#{p_brand}
+	</select>
+	
+	<!-- 전체게시물 수 조회 -->
+	<select id="product_count_list" resultType="int">
+		select count(*) from akki_product
+	</select>
+	
+	<!-- 전체게시물 수 조회 -->
+	<select id="all_search_count" resultType="int">
+		select count(*) from akki_product where
+		p_type LIKE concat('%', #{what}, '%') or
+		p_brand LIKE concat('%', #{what}, '%') or
+		p_origin LIKE concat('%', #{what}, '%') or
+		p_name LIKE concat('%', #{what}, '%') or
+		p_content_s LIKE concat('%', #{what}, '%')
+		ORDER BY FIELD(p_pop,1,0) ASC, p_date DESC
+	</select>
+	
+	<!-- 전체게시물 수 조회 -->
+	<select id="choose_search_count" resultType="int">
+		select count(*) from akki_product where ${how} LIKE concat('%', #{what}, '%')
+	</select>
+	
+	<!-- 메인 전체 페이징 검색 -->
+	<select id="product_list_condition_1" parameterType="Map" resultType="product">
+		select * from akki_product
+		ORDER BY FIELD(p_pop,1,0) ASC, p_date DESC
+		LIMIT #{start}, #{end}
+	</select>
+	
+	<select id="product_list_condition_2" parameterType="Map" resultType="product">
+		select * from akki_product
+		ORDER BY p_date DESC
+		LIMIT #{start}, #{end}
+	</select>
+	
+	<select id="product_list_condition_3" parameterType="Map" resultType="product">
+		select * from akki_product
+		ORDER BY p_price ASC
+		LIMIT #{start}, #{end}
+	</select>
+	
+	<select id="product_list_condition_4" parameterType="Map" resultType="product">
+		select * from akki_product
+		ORDER BY p_price DESC
+		LIMIT #{start}, #{end}
+	</select>
+	
+	<!-- 카테고리 브랜드별 페이징 검색 -->
+	<select id="product_category_condition_1" parameterType="Map" resultType="product">
+		select * from akki_product
+		where p_type=#{p_type}
+		<if test="p_brand != null">
+			and p_brand=#{p_brand}
+		</if>
+		ORDER BY FIELD(p_pop,1,0) ASC, p_date DESC
+		LIMIT #{start}, #{end}
+	</select>
+	
+	<select id="product_category_condition_2" parameterType="Map" resultType="product">
+		select * from akki_product
+		where p_type=#{p_type}
+		<if test="p_brand != null">
+			and p_brand=#{p_brand}
+		</if>
+		ORDER BY p_date DESC
+		LIMIT #{start}, #{end}
+	</select>
+	
+	<select id="product_category_condition_3" parameterType="Map" resultType="product">
+		select * from akki_product
+		where p_type=#{p_type}
+		<if test="p_brand != null">
+			and p_brand=#{p_brand}
+		</if>
+		ORDER BY p_price ASC
+		LIMIT #{start}, #{end}
+	</select>
+	
+	<select id="product_category_condition_4" parameterType="Map" resultType="product">
+		select * from akki_product
+		where p_type=#{p_type}
+		<if test="p_brand != null">
+			and p_brand=#{p_brand}
+		</if>
+		ORDER BY p_price DESC
+		LIMIT #{start}, #{end}
+	</select>
+	
+	<select id="get_amount" parameterType="int" resultType="bigdecimal">
+		select p_price from akki_product
+		where p_idx=#{p_idx}
+	</select>
+	
+</mapper>

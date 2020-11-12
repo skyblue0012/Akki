@@ -1,0 +1,189 @@
+@charset "UTF-8";
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+#sign_up {
+	font-weight: 900;
+}
+
+#sub_nav {
+	position: relative;
+	width: 1024px;
+	left: 50%;
+	height: 30px;
+	margin-top: 50px;
+	transform: translate(-50%);
+}
+
+#sub_nav * {
+	margin-top: 30px;
+	font-size: 15px;
+	cursor: pointer;
+}
+
+ul {
+	list-style: none;
+}
+
+#content_top {
+	position: relative;
+	top: 50px;
+	width: 1024px;
+	left: 50%;
+	transform: translate(-50%);
+	height: 60px;
+	background-color: #f6f6f6;
+	border: 1px solid #8e8e8e;
+	border-radius: 8px;
+}
+
+#content_top>p {
+	position: relative;
+	left: 410px;
+	font-size: 30px;
+	font-weight: 900;
+	bottom: -8px;
+}
+
+.info {
+	position: relative;
+	width: 1024px;
+	left: 50%;
+	transform: translate(-50%, 80px);
+}
+
+.red {
+	color: red;
+}
+
+.join_table {
+	width: 1024px;
+	position: relative;
+	border-collapse: collapse;
+	left: 50%;
+	transform: translate(-50%, 100px);
+}
+
+th {
+	padding: 30px 0px 30px 0px;
+	border-bottom: 1px solid #bfbfbf;
+	border-top: 1px solid;
+	width: 200px;
+}
+
+th * {
+	float: left;
+	margin-left: 10px;
+}
+
+td {
+	padding: 20px 0px 20px 0px;
+	border-bottom: 1px solid #bfbfbf;
+	border-top: 1px solid black;
+}
+
+td *:nth-child(1) {
+	margin-left: 30px;
+}
+
+input {
+	height: 30px;
+}
+
+.id_check {
+	height: 35px;
+	padding-bottom: 3px;
+	background-color: whitesmoke;
+	border: 1px solid;
+	border-radius: 3px;
+	outline: none;
+	cursor: pointer;
+}
+
+.id_check:active {
+	color: #888888;
+}
+
+#email3 {
+	height: 35px;
+	padding-bottom: 3px;
+	background-color: #f7f7f7;
+	border: 1px solid;
+	border-radius: 3px;
+	outline: none;
+	cursor: pointer;
+	font-weight: 900
+}
+
+#orgBtn {
+	width: 60px;
+	height: 37px;
+	padding-bottom: 3px;
+	background-color: #f7f7f7;
+	border: 1px solid;
+	border-radius: 3px;
+	outline: none;
+	cursor: pointer;
+	font-weight: 900;
+	position: relative;
+	left: -4px;
+	bottom: 1px;
+}
+
+.join_table :nth-child(8) input:nth-child(1) {
+	position: relative;
+	margin-left: 0;
+	width: 300px;
+}
+
+#d_address {
+	position: relative;
+	width: 360px;
+}
+
+.user_id2 {
+	width: 794px;
+	float: right;
+}
+
+#cotent_bottom {
+	width: 1024px;
+	height: 200px;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 270px);
+	margin-bottom: 80px;
+}
+
+#cotent_bottom * {
+	width: 150px;
+	height: 50px;
+	position: relative;
+	left: 44%;
+	top: -120px;
+	transform: translate(-50%);
+	margin-left: 10px;
+	font-weight: 900;
+	font-size: 16px;
+	border-radius: 5px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+
+#cotent_bottom :nth-child(1) {
+	background-color: #495164;
+	color: white;
+	outline: none;
+}
+
+#cotent_bottom :nth-child(1):active {
+	background-color: #494D64;
+}
+
+#cotent_bottom :nth-child(2):active {
+	background-color: #e8e8e8;
+}

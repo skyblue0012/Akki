@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+select {
+	width: 100px;
+	height: 30px;
+}
+
+#what {
+	width: 300px;
+	height: 30px;
+	position: relative;
+	bottom: 1px;
+}
+
+#search_box img {
+	width: 30px;
+	height: 30px;
+	position: relative;
+	top: 9px;
+	right: 5px;
+}
+
+#search_box {
+	position: relative;
+	z-index: 999;
+	width: 1024px;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+#table_box {
+	width: 1024px;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 150px);
+	margin-bottom: 100px;
+}
+
+table {
+	border-collapse: collapse;
+	width: 1024px;
+}
+
+th, td {
+	border: 1px solid black;
+	text-align: center;
+}
+
+th {
+	height: 30px;
+	background-color: #d6d6d6;
+}
+
+img {
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	object-fit: contain;
+}
+
+th:nth-child(1) {
+	width: 120px;
+}
+
+th:nth-child(5) {
+	width: 100px;
+}
+
+th:nth-child(7) {
+	width: 100px;
+}
+
+input {
+	border-radius: 6px;
+	border: 1px solid black;
+	background-color: white;
+	cursor: pointer;
+}
+
+input:nth-child(1):hover {
+	border: 2px solid #3851ff;
+	color: #3851ff;
+	font-weight: 900;
+}
+
+input:nth-child(2):hover {
+	border: 2px solid red;
+	color: red;
+	font-weight: 900;
+}

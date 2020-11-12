@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+*{
+    margin:0;padding:0;
+}
+
+#check_box{
+    width:824px;
+    height:430px;
+    position:relative;
+    left:50%;
+    transform:translate(-50%);
+    margin-left:100px;
+    margin-top:-293px;
+    border-left:1px solid #909090;
+    margin-bottom:50px;
+}
+
+.cb_subject{
+    position:relative;
+    border-bottom:1px solid #909090;
+    margin-left:30px;
+    padding-bottom:15px;
+}
+
+.cb_subject > h2{
+    margin-left:15px;
+    padding-top:10px
+}
+
+.pwd_info{
+    border:1px solid #909090;
+    margin-left:30px;
+    margin-top:20px;
+}
+
+.pwd_info *{
+    padding-left:10px;
+    font-size:15px;
+    color:#353535;
+}
+
+.pwd_info :nth-child(1){
+    margin-top:15px;
+}
+.pwd_info :nth-child(2){
+    margin-top:10px;
+    margin-bottom:15px;
+}
+
+.check_pwd{
+    margin-left:30px;
+    margin-top:50px;
+    margin-bottom:80px;
+}
+
+.check_pwd > h3{
+    padding-bottom:15px;
+    padding-left:15px;
+}
+
+.check_pwd :nth-child(2){
+    display:inline-block;
+    background:#dbdbdb;
+    width:100px;
+    padding:8px;
+    margin-left:10px;
+    margin-top:5px;
+    border:1px solid #909090;
+    border-left:none;
+}
+
+.check_pwd :nth-child(3){
+    display:inline-block;
+    width:642px; 
+    padding:8px;
+    border:1px solid #909090;
+    border-right:none;
+}
+
+.check_pwd :nth-child(4){
+   display:inline-block;
+    background:#dbdbdb;
+    width:100px;
+    padding:8px;
+    margin-left:10px;
+    border:1px solid #909090;
+    border-left:none;
+    border-top:none;
+}
+
+.pwd_input{
+    display:inline-block;
+    width:642px; 
+    padding:8px;
+    margin-bottom:15px;
+    border:1px solid #909090;
+    border-right:none;
+    height:21px;
+    border-top:none;
+}
+
+.pwd_input *{
+    border:1px solid #313131;
+    border-radius:3px;
+    width:150px;
+    height:20px;
+}
+
+.submit{
+    width:80px;
+    height:30px;
+    position:relative;
+    left:90%;
+    transform:translate(-0%, -60px);
+    border:1px solid #003aaa;
+    background-color:#4368af;
+    font-size:13px;
+    color:white;
+    font-wight:900;
+    border-radius:3px;
+}

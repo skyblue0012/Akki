@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+a{
+    text-decoration:none;
+    color:black;
+}
+
+*{
+    margin:0;
+    padding:0;
+}
+
+
+
+#sub_nav{
+    position:relative;
+    left:50%;
+    top:70px;
+    width:1024px;
+    height:40px;
+    transform:translate(-50%);
+}
+
+#sub_nav *{
+    font-size:15px;
+    position:relative;
+    right:23px;
+    transform:translate(20px);
+    display:inline-block;
+}
+
+#sub_nav > ul :nth-child(2){
+    bottom:1px;
+}
+
+#sub_nav > ul :nth-child(3){
+    margin-left:5px;
+    font-weight:900;
+}
+
+#cotent_box{
+    position:relative;
+    width:520px;
+    border:2px solid gainsboro;
+    border-radius:10px;
+    height:520px;
+    left:50%;
+    transform:translate(-50%, 150px);
+    margin-bottom:250px;
+}
+
+#cotent_box >:nth-child(1){
+    position:absolute;
+    left:50%;
+    transform:translate(-50%,-40px);
+}
+
+#cotent_box >:nth-child(2){
+    position:absolute;
+    left:50%;
+    transform:translate(-50%,170px);
+    font-size:22px;
+}
+
+#cotent_box >:nth-child(3){
+    position:absolute;
+    left:50%;
+    width:170px;
+    transform:translate(-50%,220px);
+    padding:10px 30px 10px 10px;
+    border-radius:3px;
+    border:1px solid #8c8c8c;
+}
+
+#cotent_box >:nth-child(4){
+    position:absolute;
+    left:50%;
+    width:170px;
+    transform:translate(-50%,270px);
+    padding:10px 30px 10px 10px;
+    border-radius:3px;
+    border:1px solid #8c8c8c;
+}
+
+#cotent_box >:nth-child(5){
+    position:absolute;
+    left:50%;
+    transform:translate(-50%,330px);
+    width:210px;
+    height:40px;
+    background-color:#20297d;
+    border:none;
+    color:white;
+    font-weight:900;
+    cursor:pointer;
+    border-radius:3px;
+}
+
+#cotent_box >:nth-child(6){
+    margin-top:420px;
+    width:480px;
+    position:relative;
+    left:50%;
+    transform:translate(-50%);
+}
+
+ul{
+    list-style:none;
+}
+
+#cotent_box >:nth-child(7){
+    position:absolute;
+    left:50%;
+    transform:translate(-50%);
+    margin-top:20px;
+    font-size:14px;
+    width:240px;
+    display:flex;
+}
+
+#cotent_box >:nth-child(7) :nth-child(1){
+    margin-right:3px;
+    margin-left:10px;
+}
+
+#cotent_box >:nth-child(7) :nth-child(3){
+    margin-left:2px;
+}

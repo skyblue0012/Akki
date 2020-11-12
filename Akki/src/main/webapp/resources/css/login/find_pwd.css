@@ -1,0 +1,158 @@
+@charset "UTF-8";
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#cotent_box {
+	position: relative;
+	width: 520px;
+	border: 2px solid gainsboro;
+	border-radius: 10px;
+	height: 280px;
+	left: 50%;
+	transform: translate(-50%, 150px);
+	margin-bottom: 250px;
+}
+
+#find_pwd {
+	position: relative;
+    top: 20px;
+    left: 40%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#check_what {
+	position: relative;
+	top: 40px;
+	left: 37%;
+}
+
+#check_id {
+	position: relative;
+	top: 60px;
+	left: 15%;
+}
+
+#check_id>:nth-child(1) {
+	margin-right: 54px;
+}
+
+#check_id>:nth-child(2) {
+	width: 180px;
+}
+
+#check_name {
+	position: relative;
+	top: 70px;
+	left: 15%;
+}
+
+#check_name>:nth-child(1) {
+	margin-right: 70px;
+}
+
+#check_name>:nth-child(2) {
+	width: 180px;
+}
+
+#check_email {
+	position: relative;
+	top: 80px;
+	left: 15%;
+}
+
+#check_email>:nth-child(1) {
+	margin-right: 54px;
+}
+
+#check_email>:nth-child(2) {
+	width: 180px;
+}
+
+#check_phone {
+	display: none;
+	position: relative;
+	top: 80px;
+	left: 15%;
+}
+
+#check_phone>:nth-child(1) {
+	margin-right: 22px;
+}
+
+.check_phone_number {
+	width: 45.5px;
+	text-align: center;
+}
+
+#submit {
+	position: relative;
+    top: 105px;
+    left: 43%;
+    color: #fff;
+    background-color: #495164;
+    width: 100px;
+    height: 40px;
+    font-weight: bold;
+    border-radius: 3px;
+    border: 1px solid black;
+}
+
+#result_box {
+	display: none;
+	position: relative;
+	width: 520px;
+	border: 2px solid gainsboro;
+	border-radius: 10px;
+	height: 250px;
+	left: 50%;
+	transform: translate(-50%, 150px);
+	margin-bottom: 250px;
+}
+
+#coment {
+	position: relative;
+	top: 40px;
+	left: 25%;
+	font-size: 20px;
+	font-weight: bold;
+	color: #0078ff
+}
+
+#res_pwd {
+	position: relative;
+	width: 120px;
+	top: 50px;
+	left: 40%;
+	text-align: center;
+	font-size: 17px;
+	outline: none;
+}
+
+#coment_id {
+	position: relative;
+	position: relative;
+	top: 79px;
+	left: 20%;
+}
+
+#log_in {
+	position: relative;
+	top: 120px;
+	left: 17%;
+	color: #fff;
+	background-color: #495164;
+	width: 100px;
+	height: 40px;
+	font-weight: bold;
+	border-radius: 3px;
+	border: 1px solid black;
+}

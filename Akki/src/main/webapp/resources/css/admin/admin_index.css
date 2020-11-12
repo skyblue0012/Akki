@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+html, body { height: 100%; }
+body {
+  margin: 0;
+  overflow-x: hidden;
+  display: flex;
+}
+
+#menu { display: none; }
+#menu ~ * {
+
+  position: absolute;
+  transition: transform 0.4s;
+}
+#menu:checked ~ nav,label { 
+  transform: translate3d(200px, 0, 0); 
+}
+#menu ~ label {
+  font-size: 54px;
+  top: -16px; left: 8px;
+  cursor: pointer;
+  z-index: 1;
+}
+#menu ~ nav {
+  z-index:9999;
+  background: black;
+  width: 200px;
+  left: -200px;
+  height: 100%;
+}
+#menu ~ nav * {
+  margin: 0; padding: 0;
+  color: white;
+}
+#menu ~ nav header {
+  background: teal;
+  padding: 1em;
+}
+#menu ~ nav a {
+  display: block;
+  text-decoration: none;
+  padding: 1em;
+}
+#menu ~ nav a:hover { background: gray; }
+
+#content {
+  position: relative;
+  padding: 2.6em 1em 1em;
+  width: 100%;
+}

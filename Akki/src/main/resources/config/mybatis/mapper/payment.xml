@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="pay">
+	
+	<!-- 구매금액 합계 -->
+	<select id="get_price" parameterType="int" resultType="int">
+		select p_price from akki_product
+		where p_idx=#{p_idx}
+	</select>
+	
+	<!-- 결제관련DB 추가 -->
+	<insert id="add_order" parameterType="payment">
+		insert into akki_order values( 
+			#{o_idx}, #{o_no}, #{o_pg}, #{o_id}, #{o_pay}, #{o_status}, #{o_price}, #{o_deliver}, #{o_dnumber}, #{o_date}
+		)
+	</insert>
+	
+	<!-- 결제관련DB 추가 -->
+	<insert id="add_order_detail" parameterType="Map">
+		insert into akki_order_detail values (
+			#{od_idx}, #{o_no}, #{p_idx}, #{amount}, #{p_price}
+		)
+	</insert>
+	
+	<!-- 배송정보 추가 -->
+	<insert id="add_delivery" parameterType="delivery">
+		insert into akki_deliver values (
+			#{d_idx}, #{o_no}, #{d_name}, #{d_tel}, #{d_telhome}, #{d_addr}, #{d_dm}
+		)
+	</insert>
+	
+	<!-- 무통장입금 정보 추가 -->
+	<insert id="add_bank" parameterType="bank">
+		insert into akki_bank values (
+			#{bk_idx}, #{o_no}, #{b_name}, #{b_account}, #{b_status}
+		)
+	</insert>
+	
+	<!-- 주문완료한 정보 가져오기 -->
+	<select id="recent_order" parameterType="long" resultType="payment">
+		select * from akki_order where o_no = #{no}
+	</select>
+	
+	<!-- 주문완료한 상품정보 가져오기 -->
+	<select id="recent_order_list" parameterType="long" resultType="payment_list">
+		select o.od_idx, o.o_no, o.p_idx, o.amount, o.p_price, p.p_name, p.p_img
+		from akki_product p, akki_order_detail o
+		where  o_no = #{no} and p.p_idx = o.p_idx
+	</select>
+	
+	<!-- 주문완료한 배송정보 가져오기 -->
+	<select id="recent_deliver" parameterType="long" resultType="delivery">
+		select * from akki_deliver where o_no = #{no}
+	</select>
+	
+	<!-- 주문완료한 무통장입금정보 가져오기 -->
+	<select id="recent_bank" parameterType="long" resultType="bank">
+		select * from akki_bank where o_no = #{no}
+	</select>
+	
+	<!-- 결제정보 삭제 -->
+	<delete id="del_order">
+		delete from akki_order where o_no=#{no}
+	</delete>
+	
+	<delete id="del_order_detail">
+		delete from akki_order_detail where o_no=#{no}
+	</delete>
+	
+	<delete id="del_delivery">
+		delete from akki_deliver where o_no=#{no}
+	</delete>
+	
+	<delete id="del_bank">
+		delete from akki_bank where o_no=#{no}
+	</delete>
+	
+	<!-- 주문정보 페이징 가져오기 -->
+	<select id="order_select" parameterType="Map" resultType="order">
+		select o.o_idx, o.o_no, o.o_date, p.p_img, p.p_name, od.amount, od.p_price, o.o_deliver, o.o_status
+		from akki_product p, akki_order o, akki_order_detail od
+		where o_id = #{id} and p.p_idx = od.p_idx and o.o_no = od.o_no
+		<if test="mode == 'cancel'">
+			and (o.o_deliver = 4 or o.o_deliver = 5 or o.o_deliver = 6)
+		</if>
+		<if test="mode == 'buy'">
+			<if test="o_deliver != 99">
+				and o.o_deliver = #{o_deliver}
+			</if>
+		</if>
+		and o.o_date between date(#{start_date}) and date(#{end_date})+1
+		ORDER BY o.o_date DESC
+		LIMIT #{start}, #{end}
+	</select>
+	
+	<!-- 주문정보 총 개수 구하기 -->
+	<select id="order_total" parameterType="Map" resultType="int">
+		select count(*) from akki_order_detail od, akki_order o where o.o_id=#{id} and o.o_no = od.o_no
+		<if test="mode == 'cancel'">
+			and (o.o_deliver = 4 or o.o_deliver = 5 or o.o_deliver = 6)
+		</if>
+		<if test="mode == 'buy'">
+			<if test="o_deliver != 99">
+				and o.o_deliver = #{o_deliver}
+			</if>
+		</if>
+		and o.o_date between date(#{start_date}) and date(#{end_date})+1
+	</select>
+	
+	<!-- 주문취소 db변경 -->
+	<update id="cancel_order" parameterType="long">
+		update akki_order set o_deliver = 4, o_status = 'cancel'
+		where o_no = #{o_no}
+	</update>
+	
+</mapper>

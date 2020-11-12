@@ -1,0 +1,275 @@
+@charset "UTF-8";
+
+#all_box *{margin:0;padding:0;}
+
+
+#top_box1{
+  position:relative;
+  width:1024px;
+  height:150px;
+  left:50%;
+  transform:translate(-50%);
+}
+
+#top_box1 > #phone{
+  float:left;
+  margin-right:150px;
+}
+
+#top_box1 > #phone p:nth-child(1){
+  font-size:18px;
+  padding-bottom:5px;
+  margin-left:15px;
+  margin-top:5px;
+  display:inline-block;
+  font-weight:900;
+  border-bottom:1px solid;
+}
+
+#top_box1 > #phone p:nth-child(2){
+  font-size:16px;
+  font-weight:900;
+  padding-left:15px;
+  margin-top:10px;
+  margin-bottom:5px;
+}
+
+#top_box1 > #phone p:nth-child(3){
+  padding-left:15px;
+  margin-top:5px;
+  font-size:12px;
+}
+
+#top_box1 > #phone p:nth-child(4){
+  padding-left:15px;
+  font-size:12px;
+}
+
+#top_box1 > #phone p:nth-child(5){
+  padding-left:15px;
+  font-size:12px;
+}
+
+#top_box1 > #phone p:nth-child(6){
+  padding-left:15px;
+  margin-bottom:5px;
+  font-size:12px;
+}
+
+#top_box1 > #bank p:nth-child(1){
+  font-size:18px;
+  font-weight:900;
+  padding-bottom:5px;
+  display:inline-block;
+  margin-bottom:10px;
+  margin-top:5px;
+  border-bottom:1px solid;
+}
+
+#top_box1 > #bank p:nth-child(2){
+  margin-top:0px;
+  font-size:12px;
+}
+
+#top_box1 > #bank p:nth-child(3){
+  margin-top:5px;
+  font-size:12px;
+}
+
+#middle_box{
+  position:relative;
+  width:1024px;
+  left:50%;
+  height:110px;
+  transform:translate(-50%);
+}
+
+.f_gray{
+  color:#636363;
+}
+
+#middle_box :nth-child(1){
+  font-size:18px;
+  font-weight:900;
+  padding-bottom:5px;
+  margin-left:15px;
+  border-bottom:1px solid;
+  display:inline;
+}
+
+#middle_box :nth-child(2){
+  position:absolute;
+  top:40px;
+  left:15px;
+  font-size:12px;
+}
+#middle_box :nth-child(3){
+  position:absolute;
+  top:40px;
+  left:65px;
+  font-size:12px;
+}
+#middle_box :nth-child(4){
+  position:absolute;
+  top:40px;
+  left:155px;
+  font-size:12px;
+}
+#middle_box :nth-child(5){
+  position:absolute;
+  top:40px;
+  left:190px;
+  font-size:12px;
+}
+#middle_box :nth-child(6){
+  position:absolute;
+  top:40px;
+  left:250px;
+  font-size:12px;
+}
+#middle_box :nth-child(7){
+  position:absolute;
+  top:40px;
+  left:310px;
+  font-size:12px;
+}
+#middle_box :nth-child(8){
+  position:absolute;
+  top:40px;
+  left:570px;
+  font-size:12px;
+}
+#middle_box :nth-child(9){
+  position:absolute;
+  top:40px;
+  left:605px;
+  font-size:12px;
+}
+#middle_box :nth-child(10){
+  position:absolute;
+  top:60px;
+  left:15px;
+  font-size:12px;
+}
+#middle_box :nth-child(11){
+  position:absolute;
+  top:60px;
+  left:55px;
+  font-size:12px;
+}
+#middle_box :nth-child(12){
+  position:absolute;
+  top:80px;
+  left:15px;
+  font-size:12px;
+}
+#middle_box :nth-child(13){
+  position:absolute;
+  top:80px;;
+  left:115px;
+  font-size:12px;
+}
+#middle_box :nth-child(14){
+  position:absolute;
+  top:80px;
+  left:220px;
+  font-size:12px;
+}
+#middle_box :nth-child(15){
+  position:absolute;
+  top:80px;
+  left:325px;
+  font-size:12px;
+}
+#middle_box :nth-child(16){
+  position:absolute;
+  top:100px;
+  left:15px;
+  font-size:12px;
+}
+#middle_box :nth-child(17){
+  position:absolute;
+  top:100px;
+  left:140px;
+  font-size:12px;
+}
+#middle_box :nth-child(18){
+  position:absolute;
+  top:40px;
+  left:415px;
+  font-size:12px;
+}
+#middle_box :nth-child(19){
+  position:absolute;
+  top:40px;
+  left:473px;
+  font-size:12px;
+}
+
+#line1{
+  width:1024px;
+  position:absolute;
+  left:50%;
+  transform:translate(-50%, -7px);
+  margin-bottom:15px;
+}
+
+#bottom_box{
+  background:#6f6f6f;
+  position:relative;
+  width:1024px;
+  left:50%;
+  transform:translate(-50%);
+  height:40px;
+  margin-top:15px;
+}
+
+#bottom_box > p{
+  margin-left:15px;
+  font-size:12px;
+  font-weight:900;
+  position:absolute;
+  top:50%;
+  transform:translate(0,-50%);
+  color:white;
+}
+
+#tag_line{
+  border-top:1px solid black;
+  width:1024px;
+  position:relative;
+  left:50%;
+  transform:translate(-50%);
+  border-bottom:1px solid #909090;
+  padding-bottom:5px;
+}
+
+#tag_line > ul{
+  padding-left:18px;
+}
+
+#tag_line *{
+  font-size:12px;
+  padding-top:2px;
+}
+
+ul li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display:inline-block;
+}
+
+a{
+  text-decoration:none;
+  color:black;
+}
+
+ul > li :nth-child(1){
+  font-size:7px;
+}
+
+ul{
+  padding-bottom:10px;
+  margin-left:10px;
+}
